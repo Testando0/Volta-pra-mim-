@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volta pra mim?</title>
+    <style>
+        body{
+            background-color: red;
+        }
+
+        .painel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            background-color: white;
+            width: 600px;
+            height: 640px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: solid 1px darkred;
+        }
+
+        .painel div{
+            margin-top: 25px;
+            margin-right: 140px;
+        }
+
+        #sim{
+            height: 70px;
+            width: 95px;
+            background-color: red;
+            border: solid 2px white;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        #nao{
+            position: absolute;
+            height: 70px;
+            width: 95px;
+            background-color: red;
+            border: solid 2px white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        img{
+            width: 450px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h2>ANA<br> Gostaria que soubesse que... <br><br> SINTO MUUITO A SUA FALTAAAAA</h2>
+        <h3>Não suporto a ideia de passar o resto da minha vida longe de você!</h3>
+        <h1>NANA, VOLTA PRA MIM ?</h1>
+        <img src="https://i.gifer.com/OQp1.gif" alt="">
+        
+        <div>
+            <a target="_blank" href="https://www.youtube.com/watch?v=fcAlu5om1is"><button id="sim"> Sim!! 😍</button></a>
+            <button onmouseover="fuja()" id="nao"> Não! 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function fuja(){
+            var nao = document.getElementById('nao');
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - nao.offsetWidth;
+            var maxY = alturaJanela - nao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX)
+            var aleatorioY = Math.floor(Math.random() * maxY)
+
+            nao.style.left = aleatorioX + "px";
+            nao.style.top = aleatorioY + "px";
+
+        }
+    </script>
+</body>
+</html>
